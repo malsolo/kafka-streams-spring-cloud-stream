@@ -1,0 +1,12 @@
+{
+ "name": "RewardAccumulator",
+ "namespace": "com.malsolo.kafka.streams.spring.cloud.stream.model.avro",
+ "type": "record",
+ "fields": [
+     {"name": "customerId", "type": "string"},
+     {"name": "purchaseTotal", "type": "double"},
+     {"name": "currentRewardPoints", "type": "int"},
+     {"name": "totalRewardPoints", "type": "int"},
+     {"name": "daysFromLastPurchase", "type": "int"}
+ ]
+}

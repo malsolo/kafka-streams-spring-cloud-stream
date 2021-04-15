@@ -1,0 +1,11 @@
+{
+ "name": "PurchasePattern",
+ "namespace": "com.malsolo.kafka.streams.spring.cloud.stream.model.avro",
+ "type": "record",
+ "fields": [
+     {"name": "zipCode", "type": "string"},
+     {"name": "item", "type": "string"},
+     {"name": "date", "type": {"type": "int", "logicalType": "date"}},
+     {"name": "amount", "type": "double"}
+ ]
+}

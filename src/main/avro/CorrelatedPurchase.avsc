@@ -1,0 +1,12 @@
+{
+ "name": "CorrelatedPurchase",
+ "namespace": "com.malsolo.kafka.streams.spring.cloud.stream.model.avro",
+ "type": "record",
+ "fields": [
+     {"name": "customerId", "type": "string"},
+     {"name":"itemsPurchased", "type": {"type": "array","items": "string"}},
+     {"name": "totalAmount", "type": "double"},
+     {"name": "firstPurchaseTime", "type": {"type": "int", "logicalType": "date"}},
+     {"name": "secondPurchaseTime", "type": {"type": "int", "logicalType": "date"}}
+ ]
+}
