@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.malsolo.kafka.streams.spring.cloud.stream.model.avro;
+package com.malsolo.kafka.purchase.model.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class CorrelatedPurchase extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 4191229574999406312L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CorrelatedPurchase\",\"namespace\":\"com.malsolo.kafka.streams.spring.cloud.stream.model.avro\",\"fields\":[{\"name\":\"customerId\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"itemsPurchased\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}},{\"name\":\"totalAmount\",\"type\":\"double\"},{\"name\":\"firstPurchaseTime\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}},{\"name\":\"secondPurchaseTime\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]}");
+  private static final long serialVersionUID = 4405993311229722839L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CorrelatedPurchase\",\"namespace\":\"com.malsolo.kafka.purchase.model.avro\",\"fields\":[{\"name\":\"customerId\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"itemsPurchased\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}},{\"name\":\"totalAmount\",\"type\":\"double\"},{\"name\":\"firstPurchaseTime\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}},{\"name\":\"secondPurchaseTime\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -234,8 +234,8 @@ static {
    * Creates a new CorrelatedPurchase RecordBuilder.
    * @return A new CorrelatedPurchase RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder newBuilder() {
-    return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder();
+  public static com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder newBuilder() {
+    return new com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder();
   }
 
   /**
@@ -243,11 +243,11 @@ static {
    * @param other The existing builder to copy.
    * @return A new CorrelatedPurchase RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder newBuilder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder other) {
+  public static com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder newBuilder(com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder other) {
     if (other == null) {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder();
+      return new com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder();
     } else {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder(other);
+      return new com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder(other);
     }
   }
 
@@ -256,11 +256,11 @@ static {
    * @param other The existing instance to copy.
    * @return A new CorrelatedPurchase RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder newBuilder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase other) {
+  public static com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder newBuilder(com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase other) {
     if (other == null) {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder();
+      return new com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder();
     } else {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder(other);
+      return new com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder(other);
     }
   }
 
@@ -286,7 +286,7 @@ static {
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder other) {
+    private Builder(com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.customerId)) {
         this.customerId = data().deepCopy(fields()[0].schema(), other.customerId);
@@ -314,7 +314,7 @@ static {
      * Creates a Builder by copying an existing CorrelatedPurchase instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase other) {
+    private Builder(com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.customerId)) {
         this.customerId = data().deepCopy(fields()[0].schema(), other.customerId);
@@ -352,7 +352,7 @@ static {
       * @param value The value of 'customerId'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder setCustomerId(java.lang.String value) {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder setCustomerId(java.lang.String value) {
       validate(fields()[0], value);
       this.customerId = value;
       fieldSetFlags()[0] = true;
@@ -372,7 +372,7 @@ static {
       * Clears the value of the 'customerId' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder clearCustomerId() {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder clearCustomerId() {
       customerId = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -392,7 +392,7 @@ static {
       * @param value The value of 'itemsPurchased'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder setItemsPurchased(java.util.List<java.lang.String> value) {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder setItemsPurchased(java.util.List<java.lang.String> value) {
       validate(fields()[1], value);
       this.itemsPurchased = value;
       fieldSetFlags()[1] = true;
@@ -412,7 +412,7 @@ static {
       * Clears the value of the 'itemsPurchased' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder clearItemsPurchased() {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder clearItemsPurchased() {
       itemsPurchased = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -432,7 +432,7 @@ static {
       * @param value The value of 'totalAmount'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder setTotalAmount(double value) {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder setTotalAmount(double value) {
       validate(fields()[2], value);
       this.totalAmount = value;
       fieldSetFlags()[2] = true;
@@ -452,7 +452,7 @@ static {
       * Clears the value of the 'totalAmount' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder clearTotalAmount() {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder clearTotalAmount() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -471,7 +471,7 @@ static {
       * @param value The value of 'firstPurchaseTime'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder setFirstPurchaseTime(java.time.LocalDate value) {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder setFirstPurchaseTime(java.time.LocalDate value) {
       validate(fields()[3], value);
       this.firstPurchaseTime = value;
       fieldSetFlags()[3] = true;
@@ -491,7 +491,7 @@ static {
       * Clears the value of the 'firstPurchaseTime' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder clearFirstPurchaseTime() {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder clearFirstPurchaseTime() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -510,7 +510,7 @@ static {
       * @param value The value of 'secondPurchaseTime'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder setSecondPurchaseTime(java.time.LocalDate value) {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder setSecondPurchaseTime(java.time.LocalDate value) {
       validate(fields()[4], value);
       this.secondPurchaseTime = value;
       fieldSetFlags()[4] = true;
@@ -530,7 +530,7 @@ static {
       * Clears the value of the 'secondPurchaseTime' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.CorrelatedPurchase.Builder clearSecondPurchaseTime() {
+    public com.malsolo.kafka.purchase.model.avro.CorrelatedPurchase.Builder clearSecondPurchaseTime() {
       fieldSetFlags()[4] = false;
       return this;
     }

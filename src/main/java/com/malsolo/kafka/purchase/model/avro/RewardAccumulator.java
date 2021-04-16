@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.malsolo.kafka.streams.spring.cloud.stream.model.avro;
+package com.malsolo.kafka.purchase.model.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -2162025430212093405L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RewardAccumulator\",\"namespace\":\"com.malsolo.kafka.streams.spring.cloud.stream.model.avro\",\"fields\":[{\"name\":\"customerId\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"purchaseTotal\",\"type\":\"double\"},{\"name\":\"currentRewardPoints\",\"type\":\"int\"},{\"name\":\"totalRewardPoints\",\"type\":\"int\"},{\"name\":\"daysFromLastPurchase\",\"type\":\"int\"}]}");
+  private static final long serialVersionUID = -5008660812766128840L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"RewardAccumulator\",\"namespace\":\"com.malsolo.kafka.purchase.model.avro\",\"fields\":[{\"name\":\"customerId\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"purchaseTotal\",\"type\":\"double\"},{\"name\":\"currentRewardPoints\",\"type\":\"int\"},{\"name\":\"totalRewardPoints\",\"type\":\"int\"},{\"name\":\"daysFromLastPurchase\",\"type\":\"int\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -216,8 +216,8 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
    * Creates a new RewardAccumulator RecordBuilder.
    * @return A new RewardAccumulator RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder newBuilder() {
-    return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder();
+  public static com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder newBuilder() {
+    return new com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder();
   }
 
   /**
@@ -225,11 +225,11 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
    * @param other The existing builder to copy.
    * @return A new RewardAccumulator RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder newBuilder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder other) {
+  public static com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder newBuilder(com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder other) {
     if (other == null) {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder();
+      return new com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder();
     } else {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder(other);
+      return new com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder(other);
     }
   }
 
@@ -238,11 +238,11 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
    * @param other The existing instance to copy.
    * @return A new RewardAccumulator RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder newBuilder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator other) {
+  public static com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder newBuilder(com.malsolo.kafka.purchase.model.avro.RewardAccumulator other) {
     if (other == null) {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder();
+      return new com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder();
     } else {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder(other);
+      return new com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder(other);
     }
   }
 
@@ -268,7 +268,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder other) {
+    private Builder(com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.customerId)) {
         this.customerId = data().deepCopy(fields()[0].schema(), other.customerId);
@@ -296,7 +296,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
      * Creates a Builder by copying an existing RewardAccumulator instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator other) {
+    private Builder(com.malsolo.kafka.purchase.model.avro.RewardAccumulator other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.customerId)) {
         this.customerId = data().deepCopy(fields()[0].schema(), other.customerId);
@@ -334,7 +334,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'customerId'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder setCustomerId(java.lang.String value) {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder setCustomerId(java.lang.String value) {
       validate(fields()[0], value);
       this.customerId = value;
       fieldSetFlags()[0] = true;
@@ -354,7 +354,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'customerId' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder clearCustomerId() {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder clearCustomerId() {
       customerId = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -374,7 +374,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'purchaseTotal'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder setPurchaseTotal(double value) {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder setPurchaseTotal(double value) {
       validate(fields()[1], value);
       this.purchaseTotal = value;
       fieldSetFlags()[1] = true;
@@ -394,7 +394,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'purchaseTotal' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder clearPurchaseTotal() {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder clearPurchaseTotal() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -413,7 +413,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'currentRewardPoints'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder setCurrentRewardPoints(int value) {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder setCurrentRewardPoints(int value) {
       validate(fields()[2], value);
       this.currentRewardPoints = value;
       fieldSetFlags()[2] = true;
@@ -433,7 +433,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'currentRewardPoints' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder clearCurrentRewardPoints() {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder clearCurrentRewardPoints() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -452,7 +452,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'totalRewardPoints'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder setTotalRewardPoints(int value) {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder setTotalRewardPoints(int value) {
       validate(fields()[3], value);
       this.totalRewardPoints = value;
       fieldSetFlags()[3] = true;
@@ -472,7 +472,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'totalRewardPoints' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder clearTotalRewardPoints() {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder clearTotalRewardPoints() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -491,7 +491,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'daysFromLastPurchase'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder setDaysFromLastPurchase(int value) {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder setDaysFromLastPurchase(int value) {
       validate(fields()[4], value);
       this.daysFromLastPurchase = value;
       fieldSetFlags()[4] = true;
@@ -511,7 +511,7 @@ public class RewardAccumulator extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'daysFromLastPurchase' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.RewardAccumulator.Builder clearDaysFromLastPurchase() {
+    public com.malsolo.kafka.purchase.model.avro.RewardAccumulator.Builder clearDaysFromLastPurchase() {
       fieldSetFlags()[4] = false;
       return this;
     }

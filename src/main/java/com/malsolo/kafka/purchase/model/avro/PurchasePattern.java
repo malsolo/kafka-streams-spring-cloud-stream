@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.malsolo.kafka.streams.spring.cloud.stream.model.avro;
+package com.malsolo.kafka.purchase.model.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class PurchasePattern extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -2836454865892400600L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PurchasePattern\",\"namespace\":\"com.malsolo.kafka.streams.spring.cloud.stream.model.avro\",\"fields\":[{\"name\":\"zipCode\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"item\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"date\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}},{\"name\":\"amount\",\"type\":\"double\"}]}");
+  private static final long serialVersionUID = 7202443149903509899L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PurchasePattern\",\"namespace\":\"com.malsolo.kafka.purchase.model.avro\",\"fields\":[{\"name\":\"zipCode\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"item\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"date\",\"type\":{\"type\":\"int\",\"logicalType\":\"date\"}},{\"name\":\"amount\",\"type\":\"double\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -211,8 +211,8 @@ static {
    * Creates a new PurchasePattern RecordBuilder.
    * @return A new PurchasePattern RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder newBuilder() {
-    return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder();
+  public static com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder newBuilder() {
+    return new com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder();
   }
 
   /**
@@ -220,11 +220,11 @@ static {
    * @param other The existing builder to copy.
    * @return A new PurchasePattern RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder newBuilder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder other) {
+  public static com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder newBuilder(com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder other) {
     if (other == null) {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder();
+      return new com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder();
     } else {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder(other);
+      return new com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder(other);
     }
   }
 
@@ -233,11 +233,11 @@ static {
    * @param other The existing instance to copy.
    * @return A new PurchasePattern RecordBuilder
    */
-  public static com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder newBuilder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern other) {
+  public static com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder newBuilder(com.malsolo.kafka.purchase.model.avro.PurchasePattern other) {
     if (other == null) {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder();
+      return new com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder();
     } else {
-      return new com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder(other);
+      return new com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder(other);
     }
   }
 
@@ -262,7 +262,7 @@ static {
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder other) {
+    private Builder(com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.zipCode)) {
         this.zipCode = data().deepCopy(fields()[0].schema(), other.zipCode);
@@ -286,7 +286,7 @@ static {
      * Creates a Builder by copying an existing PurchasePattern instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern other) {
+    private Builder(com.malsolo.kafka.purchase.model.avro.PurchasePattern other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.zipCode)) {
         this.zipCode = data().deepCopy(fields()[0].schema(), other.zipCode);
@@ -320,7 +320,7 @@ static {
       * @param value The value of 'zipCode'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder setZipCode(java.lang.String value) {
+    public com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder setZipCode(java.lang.String value) {
       validate(fields()[0], value);
       this.zipCode = value;
       fieldSetFlags()[0] = true;
@@ -340,7 +340,7 @@ static {
       * Clears the value of the 'zipCode' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder clearZipCode() {
+    public com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder clearZipCode() {
       zipCode = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -360,7 +360,7 @@ static {
       * @param value The value of 'item'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder setItem(java.lang.String value) {
+    public com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder setItem(java.lang.String value) {
       validate(fields()[1], value);
       this.item = value;
       fieldSetFlags()[1] = true;
@@ -380,7 +380,7 @@ static {
       * Clears the value of the 'item' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder clearItem() {
+    public com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder clearItem() {
       item = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -400,7 +400,7 @@ static {
       * @param value The value of 'date'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder setDate(java.time.LocalDate value) {
+    public com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder setDate(java.time.LocalDate value) {
       validate(fields()[2], value);
       this.date = value;
       fieldSetFlags()[2] = true;
@@ -420,7 +420,7 @@ static {
       * Clears the value of the 'date' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder clearDate() {
+    public com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder clearDate() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -439,7 +439,7 @@ static {
       * @param value The value of 'amount'.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder setAmount(double value) {
+    public com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder setAmount(double value) {
       validate(fields()[3], value);
       this.amount = value;
       fieldSetFlags()[3] = true;
@@ -459,7 +459,7 @@ static {
       * Clears the value of the 'amount' field.
       * @return This builder.
       */
-    public com.malsolo.kafka.streams.spring.cloud.stream.model.avro.PurchasePattern.Builder clearAmount() {
+    public com.malsolo.kafka.purchase.model.avro.PurchasePattern.Builder clearAmount() {
       fieldSetFlags()[3] = false;
       return this;
     }

@@ -1,6 +1,6 @@
 {
  "name": "RewardAccumulator",
- "namespace": "com.malsolo.kafka.streams.spring.cloud.stream.model.avro",
+ "namespace": "com.malsolo.kafka.purchase.model.avro",
  "type": "record",
  "fields": [
      {"name": "customerId", "type": "string"},
