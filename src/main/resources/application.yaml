@@ -2,6 +2,20 @@ server:
   port: 8088
 
 spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: purchasesKafkaStreamSpringCloudStreamGroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+    properties:
+      schema.registry.url: http://localhost:8081
+      specific.avro.reader: true
   cloud:
     stream:
       function:
@@ -26,3 +40,17 @@ spring:
               purchasesProcessor:
                 applicationId: spring-cloud-streams-purchasesProcessor
 
+purchases:
+  kafka:
+    producer:
+      transactions:
+        auto-start: true
+        topic: kafka-streams-demo-transactions
+        number-of-executions: 10
+        initial-delay-in-milliseconds: 1000
+        delay-in-milliseconds: 250
+    consumer:
+      purchases:
+        auto-start: true
+        group-id: PurchasesConsumerGroup
+        topic: kafka-streams-demo-purchases

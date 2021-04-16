@@ -1,4 +1,4 @@
-package com.malsolo.kafka.purchase.model;
+package com.malsolo.kafka.streams.spring.cloud.stream.model;
 
 import com.malsolo.kafka.purchase.model.avro.Purchase;
 import com.malsolo.kafka.purchase.model.avro.PurchasePattern;
