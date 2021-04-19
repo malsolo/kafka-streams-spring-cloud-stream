@@ -26,6 +26,7 @@ public class PurchasesKafkaProperties {
     @Data
     public static class ConsumerProperties {
         private final ConsumerInfo purchases = new ConsumerInfo();
+        private final ConsumerInfo patterns = new ConsumerInfo();
     }
 
     @Data

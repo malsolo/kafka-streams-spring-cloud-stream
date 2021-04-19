@@ -19,12 +19,16 @@ spring:
   cloud:
     stream:
       function:
-        definition: purchasesProcessor
+        definition: purchasesProcessor;patternsProcessor
       bindings:
         purchasesProcessor-in-0:
           destination: kafka-streams-demo-transactions
         purchasesProcessor-out-0:
           destination: kafka-streams-demo-purchases
+        patternsProcessor-in-0:
+          destination: kafka-streams-demo-transactions
+        patternsProcessor-out-0:
+          destination: kafka-streams-demo-patterns
       kafka:
         streams:
           binder:
@@ -39,7 +43,8 @@ spring:
             functions:
               purchasesProcessor:
                 applicationId: spring-cloud-streams-purchasesProcessor
-
+              patternsProcessor:
+                applicationId: spring-cloud-streams-patternsProcessor
 purchases:
   kafka:
     producer:
@@ -54,3 +59,7 @@ purchases:
         auto-start: true
         group-id: PurchasesConsumerGroup
         topic: kafka-streams-demo-purchases
+      patterns:
+        auto-start: true
+        group-id: PurchasePatternConsumerGroup
+        topic: kafka-streams-demo-patterns

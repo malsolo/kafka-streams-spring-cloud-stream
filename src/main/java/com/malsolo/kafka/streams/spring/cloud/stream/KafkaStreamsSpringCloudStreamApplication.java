@@ -3,6 +3,7 @@ package com.malsolo.kafka.streams.spring.cloud.stream;
 import static com.malsolo.kafka.streams.spring.cloud.stream.model.ModelHelper.localDateToEpochMillis;
 
 import com.malsolo.kafka.purchase.model.avro.Purchase;
+import com.malsolo.kafka.purchase.model.avro.PurchasePattern;
 import com.malsolo.kafka.streams.spring.cloud.stream.clients.TransactionProducer;
 import com.malsolo.kafka.streams.spring.cloud.stream.clients.PurchasesKafkaProperties;
 import com.malsolo.kafka.streams.spring.cloud.stream.model.ModelHelper;
@@ -35,6 +36,13 @@ public class KafkaStreamsSpringCloudStreamApplication {
 			.mapValues(ModelHelper::purchaseMaskCreditCard)
 			.filter((key, purchase) -> purchase.getPrice() > 5.00)
 			.selectKey(purchaseDateAsKey);
+	}
+
+	@Bean
+	public Function<KStream<String, Purchase>, KStream<String, PurchasePattern>> patternsProcessor() {
+		return stream -> stream
+			.mapValues(ModelHelper::purchaseMaskCreditCard)
+			.mapValues(ModelHelper::purchasePatternfromPurchase);
 	}
 
 	//END KAFKA STREAMS
