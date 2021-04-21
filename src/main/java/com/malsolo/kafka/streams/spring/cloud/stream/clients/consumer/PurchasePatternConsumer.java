@@ -1,4 +1,4 @@
-package com.malsolo.kafka.streams.spring.cloud.stream.clients;
+package com.malsolo.kafka.streams.spring.cloud.stream.clients.consumer;
 
 import com.malsolo.kafka.purchase.model.avro.PurchasePattern;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +15,7 @@ public class PurchasePatternConsumer {
         autoStartup = "${purchases.kafka.consumer.patterns.auto-start}",
         topics = "${purchases.kafka.consumer.patterns.topic}",
         groupId = "${purchases.kafka.consumer.patterns.group-id}",
-        clientIdPrefix = "PurchasePatternConsumer"
+        clientIdPrefix = "PurchasePatternConsumer-prefix"
     )
     public void consume(PurchasePattern purchasePattern) {
         log.info(">>>>> Purchase Pattern received: {}", purchasePattern);

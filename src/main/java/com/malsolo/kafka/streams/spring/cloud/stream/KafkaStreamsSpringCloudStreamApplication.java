@@ -4,7 +4,8 @@ import static com.malsolo.kafka.streams.spring.cloud.stream.model.ModelHelper.lo
 
 import com.malsolo.kafka.purchase.model.avro.Purchase;
 import com.malsolo.kafka.purchase.model.avro.PurchasePattern;
-import com.malsolo.kafka.streams.spring.cloud.stream.clients.TransactionProducer;
+import com.malsolo.kafka.purchase.model.avro.RewardAccumulator;
+import com.malsolo.kafka.streams.spring.cloud.stream.clients.producer.TransactionProducer;
 import com.malsolo.kafka.streams.spring.cloud.stream.clients.PurchasesKafkaProperties;
 import com.malsolo.kafka.streams.spring.cloud.stream.model.ModelHelper;
 import java.util.function.Function;
@@ -43,6 +44,13 @@ public class KafkaStreamsSpringCloudStreamApplication {
 		return stream -> stream
 			.mapValues(ModelHelper::purchaseMaskCreditCard)
 			.mapValues(ModelHelper::purchasePatternfromPurchase);
+	}
+
+	@Bean
+	public Function<KStream<String, Purchase>, KStream<String, Purchase>> purchasesKeySelectorProcessor() {
+		return stream -> stream
+			.selectKey((key, purchase) -> purchase.getCustomerId())
+			.mapValues(ModelHelper::purchaseMaskCreditCard);
 	}
 
 	//END KAFKA STREAMS

@@ -1,4 +1,4 @@
-package com.malsolo.kafka.streams.spring.cloud.stream.clients;
+package com.malsolo.kafka.streams.spring.cloud.stream.clients.producer;
 
 import static com.malsolo.kafka.streams.spring.cloud.stream.KafkaStreamsSpringCloudStreamApplication.EMPLOYEE_ID;
 

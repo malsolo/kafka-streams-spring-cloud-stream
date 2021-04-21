@@ -1,6 +1,7 @@
-package com.malsolo.kafka.streams.spring.cloud.stream.clients;
+package com.malsolo.kafka.streams.spring.cloud.stream.clients.producer;
 
 import com.malsolo.kafka.purchase.model.avro.Purchase;
+import com.malsolo.kafka.streams.spring.cloud.stream.clients.PurchasesKafkaProperties;
 import java.time.Duration;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
