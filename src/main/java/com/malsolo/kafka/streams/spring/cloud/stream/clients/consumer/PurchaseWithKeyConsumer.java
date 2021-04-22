@@ -19,7 +19,7 @@ public class PurchaseWithKeyConsumer {
         clientIdPrefix = "PurchaseWithKeyConsumer-prefix"
     )
     public void consume(ConsumerRecord<String, Purchase> purchaseRecord) {
-        log.info(">>>>> PurchaseWithKeyConsumer with key {} received: {}",
+        log.info("----- PurchaseWithKeyConsumer with key {} received: {}",
             purchaseRecord.key(), purchaseRecord.value());
     }
 

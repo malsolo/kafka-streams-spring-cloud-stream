@@ -57,6 +57,9 @@ spring:
                 applicationId: spring-cloud-streams-purchasesKeySelectorProcessor
               rewardsProcessor:
                 applicationId: spring-cloud-streams-rewardsProcessor
+streams:
+  state-store:
+    rewards-points: rewardsPointsStore
 purchases:
   kafka:
     producer:
@@ -79,3 +82,7 @@ purchases:
         auto-start: true
         group-id: PurchasesKeyedConsumerGroup
         topic: kafka-streams-demo-purchases-keyed
+      rewards:
+        auto-start: true
+        group-id: RewardsConsumerGroup
+        topic: kafka-streams-demo-rewards

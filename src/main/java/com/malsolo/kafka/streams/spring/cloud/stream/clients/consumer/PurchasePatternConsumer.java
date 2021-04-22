@@ -18,7 +18,7 @@ public class PurchasePatternConsumer {
         clientIdPrefix = "PurchasePatternConsumer-prefix"
     )
     public void consume(PurchasePattern purchasePattern) {
-        log.info(">>>>> Purchase Pattern received: {}", purchasePattern);
+        log.info("····· Purchase Pattern received: {}", purchasePattern);
     }
 
 }
